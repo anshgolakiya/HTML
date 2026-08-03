@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>form</title>
+    </head>
+    <body>
+        <h2 align="center">Student Registration Form</h2>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                    Name: <input type="text" maxlength="20"><br><br>
+                    Date of Birth: <input type="date"><br><br>
+                    Email: <input type="email" maxlength="50"><br><br>
+                    Age: <input type="number" min="1" max="100"><br><br>
+                    Gender: <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female<br><br>
+                    Address: <textarea rows="4" cols="50"></textarea><br><br>
+                    hobbies: <input type="checkbox" name="hobbies" value="Reading">Reading
+                    <input type="checkbox" name="hobbies" value="Coding">Coding
+                    <input type="checkbox" name="hobbies" value="Gaming">Gaming
+                    <input type="checkbox" name="hobbies" value="Traveling">Traveling<br><br>
+                    city: 
+                        <select>
+                            <option value="Surat">Surat</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Rajkot">Rajkot</option>
+                            <option value="Vadodara">Vadodara</option>
+                            <option value="Bharuch">Bharuch</option>
+                        </select><br><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Other Information</legend>
+                Username: <input type="text" maxlength="20"><br><br>
+                Password: <input type="password" maxlength="20"><br><br>
+                Enrollment Number: <input type="text" maxlength="15"><br><br>
+                Branch:
+                    <select>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Civil">Civil</option>
+                    </select><br><br>
+                Phone Number: <input type="text" maxlength="10"><br><br>
+                
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset"><br>
+        </form>
+    </body>
+</html>
