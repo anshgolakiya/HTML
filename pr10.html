@@ -10,7 +10,7 @@
                     Name: <input type="text" maxlength="20"><br><br>
                     Date of Birth: <input type="date"><br><br>
                     Email: <input type="email" maxlength="50"><br><br>
-                    Age: <input type="number" min="1" max="100"><br><br>
+                    Age: <input type="number" name="age" min="15" max="100"><br><br>
                     Gender: <input type="radio" name="gender" value="male">Male
                         <input type="radio" name="gender" value="female">Female<br><br>
                     Address: <textarea rows="4" cols="50"></textarea><br><br>
@@ -41,8 +41,16 @@
                         <option value="Civil">Civil</option>
                     </select><br><br>
                 Phone Number: <input type="number" maxlength="10"><br><br>
-                
             </fieldset>
+	    <br>
+	    <fieldset> 
+		<legend>documents upload</legend>
+		Student Photograph: <input type="file" name="photo" accept="image/*"> <br><br>
+		Student Signature: <input type="file" name="sign" accept="image/*"> <br><br>
+		10<sup>th</sup> marksheet: <input type="file" name="marksheet10" accept=".pdf"> <br><br>
+		12<sup>th</sup> marksheet: <input type="file" name="marksheet12" accept=".pdf"> <br><br>
+		Leaving certificate: <input type="file" name="LC" accept=".pdf"> <br><br>
+ 	    </fieldset>
             <br>
             <input type="submit" value="Submit">
             <input type="reset" value="Reset"><br>
