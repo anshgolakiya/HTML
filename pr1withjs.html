@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title> JavaScript sample Application</title>
+    </head>
+    <body>
+        <h2> JavaScript Sample Application</h2>
+        For get information : <button onclick="info()"> Information</button> <br>
+        For perform Arithmetic operation :<button onclick="operation()">Operation</button> <br>
+        subjects : <button onclick="looparray()"> subjects</button> <br>
+        click for finding a square : <button onclick="getsquare()">Square</button> <br>
+        <button onclick="continueornot()">continue?</button>
+        <script>
+            function info(){
+                let name = "Ansh Golakiya";
+                let age = 20 ;
+                let enno = "240760107055" ;
+                alert(
+                    "Name : " + name +
+                    "\nAge : " + age +
+                    "\nEnrollment number : " + enno
+                );
+            }
+            function operation(){
+                let a = prompt("Enter value of a :");
+                let b = prompt("Enter value of b :");
+
+                let sum = a + b;
+                let difference = a - b;
+                let product = a * b;
+                let division = a / b;
+                alert("Operators:" +
+                "\nAddition = " + sum +
+                "\nSubtraction = " + difference +
+                "\nMultiplication = " + product +
+                "\nDivision = " + division);
+            }
+            function looparray(){
+                let subjects = ["JavaScript", "Java", "Python", "DBMS"];
+                let subjectList = "Subjects:\n";
+                for (let i = 0; i < subjects.length; i++) {
+                    subjectList += (i + 1) + ". " + subjects[i] + "\n";
+                }
+
+    alert(subjectList);
+            }
+            function getsquare(){
+                    function calculateSquare(number) {
+                    return number * number;
+                }
+                let number = Number(prompt("Enter a number:"));
+                let square = calculateSquare(number);
+                alert("square of "+ number + " is " + square);
+            }
+           function continueornot(){
+                let result = confirm("Do you want to continue?");
+                if (result) {
+                    alert("You selected YES.");
+                } else {
+                    alert("You selected NO.");
+                }
+           } 
+        </script>
+    </body>
+</html>
