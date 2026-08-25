@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var age = document.getElementById("age").value;
+            var password = document.getElementById("password").value;
+
+            // Check name
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            // Check email
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email");
+                return false;
+            }
+
+            // Check mobile number
+            var mobilePattern = /^[0-9]{10}$/;
+            if (!mobilePattern.test(mobile)) {
+                alert("Mobile number must contain 10 digits");
+                return false;
+            }
+
+            // Check age
+            if (age == "" || age < 18 || age > 60) {
+                alert("Age must be between 18 and 60");
+                return false;
+            }
+
+            // Check password
+            if (password.length < 6) {
+                alert("Password must contain at least 6 characters");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        Name:
+        <input type="text" id="name">
+        <br><br>
+
+        Email:
+        <input type="text" id="email">
+        <br><br>
+
+        Mobile:
+        <input type="text" id="mobile">
+        <br><br>
+
+        Age:
+        <input type="number" id="age">
+        <br><br>
+
+        Password:
+        <input type="password" id="password">
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
