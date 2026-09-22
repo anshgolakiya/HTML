@@ -1,0 +1,35 @@
+/* Color and Background */
+body{
+    background-color: lightblue;
+    color: darkblue;
+}
+
+/* Font */
+h1 {
+    font-family: Arial;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Text */
+p {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+/* Border */
+.box {
+    border: 3px solid red;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Margin */
+.margin {
+    margin: 30px;
+    background-color: white;
+    padding: 10px;
+}
