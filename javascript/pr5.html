@@ -1,0 +1,19 @@
+<html>
+<head>
+
+</head>
+<body>
+
+<img id="image" src="image1.jpeg" alt="image">
+<script language="javascript" type="text/javascript">
+image = document.getElementById("image");
+images = ["image2.jpeg", "image3.jpeg", "image1.jpeg"];
+index = 0;
+function updateImage() {
+image.src = images[index];
+index = (index + 1) % images.length;
+}
+setInterval(updateImage,1000);
+</script>
+</body>
+</html>

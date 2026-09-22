@@ -1,0 +1,51 @@
+<html>
+<html>
+<head>
+    <title>Color Changer</title>
+
+    <script>
+        function changeBackground() {
+            let color = document.getElementById("bgColor").value;
+            document.body.bgColor = color;
+        }
+
+        function changeForeground() {
+            let color = document.getElementById("fgColor").value;
+            document.body.style.color = color;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Change Page Colors</h2>
+
+    <p>Select a background color:</p>
+
+    <select id="bgColor" onchange="changeBackground()">
+        <option value="white">White</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+    </select>
+
+    <p>Select a foreground (text) color:</p>
+
+    <select id="fgColor" onchange="changeForeground()">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+    </select>
+
+    <h3>Hello! This is a color changing page.</h3>
+
+    <p>
+        Select different colors from the above lists to change
+        the background and foreground color.
+    </p>
+
+</body>
+</html>

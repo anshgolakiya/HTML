@@ -1,0 +1,156 @@
+<html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let dob = document.getElementById("dob").value;
+            let email = document.getElementById("email").value.trim();
+            let age = document.getElementById("age").value;
+
+            let genderElement = document.querySelector('input[name="gender"]:checked');
+            let gender = genderElement ? genderElement.value : "Not Selected";
+
+            let address = document.getElementById("address").value.trim();
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value;
+            let enrollment = document.getElementById("enrollment").value;
+            let branch = document.getElementById("branch").value;
+            let phone = document.getElementById("phone").value;
+
+            
+            let hobbies = [];
+            let hobbyElements = document.querySelectorAll('input[name="hobbies"]:checked');
+
+            hobbyElements.forEach(function(hobby) {
+                hobbies.push(hobby.value);
+            });
+
+            
+            let city = document.getElementById("city").value;
+
+           
+            document.getElementById("result").innerHTML =
+                "<h2>Student Details</h2>" +
+                "Name: " + name + "<br>" +
+                "Date of Birth: " + dob + "<br>" +
+                "Email ID: " + email + "<br>" +
+                "Age: " + age + "<br>" +
+                "Gender: " + gender + "<br>" +
+                "Address: " + address + "<br>" +
+                "Hobbies: " + (hobbies.length > 0 ? hobbies.join(", ") : "None") + "<br>" +
+                "City: " + city + "<br>" +
+                "Username: " + username + "<br>" +
+                "Password: " + password + "<br>" +
+                "Enrollment No.: " + enrollment + "<br>" +
+                "Branch: " + branch + "<br>" +
+                "Phone No.: " + phone;
+
+            
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2 align="center">Student Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            Name:
+            <input type="text" id="name" maxlength="20">
+            <br><br>
+
+            Date of Birth:
+            <input type="date" id="dob">
+            <br><br>
+
+            Email:
+            <input type="email" id="email" maxlength="50">
+            <br><br>
+
+            Age:
+            <input type="number" id="age" min="15" max="100">
+            <br><br>
+
+            Gender:
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <br><br>
+
+            Address:
+            <textarea id="address" rows="4" cols="50"></textarea>
+            <br><br>
+
+            Hobbies:
+            <input type="checkbox" name="hobbies" value="Reading"> Reading
+            <input type="checkbox" name="hobbies" value="Coding"> Coding
+            <input type="checkbox" name="hobbies" value="Gaming"> Gaming
+            <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+            <br><br>
+
+            City:
+            <select id="city">
+                <option value="">Select City</option>
+                <option value="Surat">Surat</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Bharuch">Bharuch</option>
+            </select>
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Other Information</legend>
+
+            Username:
+            <input type="text" id="username" maxlength="20">
+            <br><br>
+
+            Password:
+            <input type="password" id="password" size="25" maxlength="20">
+            <br><br>
+
+            Enrollment Number:
+            <input type="number" id="enrollment">
+            <br><br>
+
+            Branch:
+            <select id="branch">
+                <option value="">Select Branch</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Civil">Civil</option>
+            </select>
+            <br><br>
+
+            Phone Number:
+            <input type="text" id="phone" maxlength="10">
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <hr>
+
+    <div id="result"></div>
+
+</body>
+</html>
