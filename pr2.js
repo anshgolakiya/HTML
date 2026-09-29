@@ -112,6 +112,9 @@ app.delete("/api/users/:id", (req, res) => {
         message: "User deleted successfully",
         user: deletedUser[0]
     });
+
+    //npm init -y
+    //npm install express
 });
 
 // Start server
